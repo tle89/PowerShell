@@ -19,4 +19,3 @@ foreach ($computer in $computers) {
     # Output the computer name and last logon time to CSV
     $computer | Select-Object Name, DistinguishedName, Enabled, @{Name="Stamp"; Expression={$dt}} | Export-Csv -Path "C:\temp\lastlogon.csv" -NoTypeInformation -Append
 }
-```
